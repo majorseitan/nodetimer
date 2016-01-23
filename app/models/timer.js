@@ -19,7 +19,9 @@ timerSchema.index({user: 1, endedAt: 1});
 
 timerSchema.virtual('duration')
   .set(function(duration) {
-    this.endedAt = moment().add('minutes', duration);
+    // Deprecation warning: moment().add(period, number) is deprecated. Please use moment().add(number, period).
+    // this.endedAt = moment().add('minutes', duration);
+    this.endedAt = moment().add(duration, 'minutes');
   })
   .get(function(duration) {
     var start = moment(this.createdAt);
