@@ -1,4 +1,7 @@
+* todo
 1. verify package list
 2. check favicon
 3. install
 4. improve log path
+* log
+1. pause button broken
