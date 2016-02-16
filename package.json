@@ -21,7 +21,7 @@
         , "connect-mongo": "latest"
         , "underscore": "latest"
         , "session": "latest"
-        , "cookieSession": "latest"
+        , "cookie-session": "latest"
         , "express-session": "latest"
         , "session": "latest"
         , "express-session": "latest"

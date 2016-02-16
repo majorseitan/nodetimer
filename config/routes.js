@@ -22,7 +22,7 @@ module.exports = function (app, passport, auth) {
   app.get('/timers', auth.requiresLogin, auth.timer.hasAuthorization, timers.index);
   app.get('/trends', auth.requiresLogin, auth.timer.hasAuthorization, trends.index);
   app.post('/timers', auth.requiresLogin, auth.timer.hasAuthorization, timers.create);
-  app.del('/timers/:id', auth.requiresLogin, auth.timer.hasAuthorization, timers.destroy);
+  app.delete('/timers/:id', auth.requiresLogin, auth.timer.hasAuthorization, timers.destroy);
   app.post('/timers/:id/stop', auth.requiresLogin, auth.timer.hasAuthorization, timers.stop);
 
   app.param('id', timers.timer);
