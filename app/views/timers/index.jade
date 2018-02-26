@@ -17,7 +17,7 @@ block form
         br
         .body-timer
           input.btn.btn-danger#stop-timer(name="action", type='submit',value="Stop")
-          &nbsp;&nbsp;
+          &nbsp; &nbsp;
           .interruption=open_timer.body
       script(type="text/javascript").
         // Javascript
@@ -73,6 +73,6 @@ block content
         - if (next)
           a(href="?page=#{next_page}") &laquo; earlier
         - if (prev && next)
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         - if (prev)
           a(href="?page=#{prev_page}") later &raquo;
