@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  mongodb:
+    image: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/data/log
+    volumes:
+      - ./data/db:/data/db
+      - ./data/log:/data/log
+  nodetimer:
+    image: blockfreie/nodetimer
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "mongodb"
